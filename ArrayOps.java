@@ -1,12 +1,15 @@
 public class ArrayOps {
     public static void main(String[] args) {
-        int[] array1 = { 1, 2, 1, 1, 2 };
-        int[] array2 = { 2, 1 };
-        System.out.println(containsTheSameElements(array1, array2));
+        int[] array1 = { 0 };
+        System.out.println(findMissingInt(array1));
 
     }
 
     public static int findMissingInt(int[] array) {
+        if (array.length == 1) {
+            return 1;
+        }
+
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (array[i] > max) {
