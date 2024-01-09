@@ -98,8 +98,6 @@ public class ArrayOps {
             }
         }
 
-        System.out.println("We have " + result);
-        System.out.println("Thats why we have to check deacrease:");
         // Check if maybe the array is decreasing:
         if (result == false) {
             result = true;
