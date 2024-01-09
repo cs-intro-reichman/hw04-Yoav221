@@ -1,6 +1,6 @@
 public class ArrayOps {
     public static void main(String[] args) {
-        int[] array1 = { 1, -2, 3 };
+        int[] array1 = { 3, 2, 1 };
         System.out.println(isSorted(array1));
 
     }
@@ -91,12 +91,26 @@ public class ArrayOps {
     }
 
     public static boolean isSorted(int[] array) {
+        boolean result = true;
         for (int i = 0; i < array.length - 1; i++) {
             if (array[i] > array[i + 1]) {
-                return false;
+                result = false;
             }
         }
-        return true;
+
+        System.out.println("We have " + result);
+        System.out.println("Thats why we have to check deacrease:");
+        // Check if maybe the array is decreasing:
+        if (result == false) {
+            result = true;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] < array[i + 1]) {
+                    result = false;
+                }
+            }
+        }
+
+        return result;
     }
 
 }
