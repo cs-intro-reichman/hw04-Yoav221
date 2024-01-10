@@ -24,8 +24,8 @@ public class StringOps {
     ////// ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        int[] indices = allIndexOf("Hello", 'l');
-        System.out.println(Arrays.toString(indices));
+        String str = " tWo wordS";
+        System.out.println(camelCase(str));
     }
 
     public static String capVowelsLowRest(String string) {
@@ -48,9 +48,31 @@ public class StringOps {
 
     public static String camelCase(String string) {
         String result = "";
+        boolean IsFirstWord = true;
         for (int i = 0; i < string.length(); i++) {
-
+            if (IsFirstWord) {
+                if (string.charAt(i) >= 65 && string.charAt(i) <= 90) {
+                    result += ((char) (string.charAt(i) + 32));
+                } else if (string.charAt(i) == ' ' && result != "") {
+                    IsFirstWord = false;
+                } else if (string.charAt(i) != ' ') {
+                    result += string.charAt(i);
+                }
+            } else if (string.charAt(i - 1) == ' ') {
+                if (string.charAt(i) >= 65 && string.charAt(i) <= 90) {
+                    result += string.charAt(i);
+                } else {
+                    result += (char) (string.charAt(i) - 32);
+                }
+            } else if (string.charAt(i) != ' ') {
+                if (string.charAt(i) >= 65 && string.charAt(i) <= 90) {
+                    result += (char) (string.charAt(i) + 32);
+                } else {
+                    result += (char) (string.charAt(i));
+                }
+            }
         }
+
         return result;
     }
 
@@ -71,6 +93,7 @@ public class StringOps {
                 counter++;
             }
         }
+
         return arr;
     }
 }
