@@ -59,12 +59,14 @@ public class StringOps {
                 } else if (string.charAt(i) != ' ') {
                     result += string.charAt(i);
                 }
+
             } else if (string.charAt(i - 1) == ' ') {
                 if (string.charAt(i) >= 65 && string.charAt(i) <= 90) {
                     result += string.charAt(i);
                 } else {
                     result += (char) (string.charAt(i) - 32);
                 }
+
             } else if (string.charAt(i) != ' ') {
                 if (string.charAt(i) >= 65 && string.charAt(i) <= 90) {
                     result += (char) (string.charAt(i) + 32);
