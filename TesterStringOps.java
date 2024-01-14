@@ -44,7 +44,7 @@ public class TesterStringOps {
         String[] testCases = {
                 "Hello World",
                 "HELLO world",
-                " tWo     wordS",
+                "twoWords",
                 "world",
                 "   Intro to  coMPUter   	sCIEncE   ",
                 // Add more test cases as needed
@@ -63,18 +63,18 @@ public class TesterStringOps {
                 "MMMM",
                 // Add more test cases as needed
         };
-        char[] characters = {'l', 'l', 'o', ' ', 'M', 'M'};
-    
+        char[] characters = { 'l', 'l', 'o', ' ', 'M', 'M' };
+
         int[][] expectedResults = {
-                {2, 3, 9},
-                {2, 3},
-                {4, 7},
-                {5},
-                {0, 1, 2, 3}
+                { 2, 3, 9 },
+                { 2, 3 },
+                { 4, 7 },
+                { 5 },
+                { 0, 1, 2, 3 }
         };
-    
+
         int[] result = StringOps.allIndexOf(strings[inputNumber - 1], characters[inputNumber - 1]);
-    
+
         System.out.println(Arrays.toString(result));
     }
 }
