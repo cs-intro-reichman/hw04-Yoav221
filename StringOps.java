@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class StringOps {
     ////////////////////////////////////////////////////////////
     ////// ///////
@@ -24,9 +22,7 @@ public class StringOps {
     ////// ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        String str = " tWo wordS";
-        String output = camelCase(str);
-        System.out.println(output);
+
     }
 
     public static String capVowelsLowRest(String string) {
